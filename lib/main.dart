@@ -123,16 +123,18 @@ class SmileyPainter extends CustomPainter {
       // Draw party hat
       final Paint hatPaint = Paint()..color = Colors.blue;
       final Path hatPath = Path()
-        ..moveTo(center.dx, center.dy - 110)
-        ..lineTo(center.dx - 50, center.dy - 40)
-        ..lineTo(center.dx + 50, center.dy - 40)
+        ..moveTo(center.dx, center.dy - 130)
+        ..lineTo(center.dx - 50, center.dy - 60)
+        ..lineTo(center.dx + 50, center.dy - 60)
         ..close();
       canvas.drawPath(hatPath, hatPaint);
 
       // Draw confetti
       final Paint confettiPaint = Paint()..color = Colors.red;
-      canvas.drawCircle(Offset(center.dx - 40, center.dy - 80), 5, confettiPaint);
-      canvas.drawCircle(Offset(center.dx + 40, center.dy - 90), 5, confettiPaint);
+      canvas.drawCircle(Offset(center.dx - 70, center.dy - 80), 5, confettiPaint);
+      canvas.drawCircle(Offset(center.dx + 70, center.dy - 90), 5, confettiPaint);
+      canvas.drawCircle(Offset(center.dx + 90, center.dy - 90), 5, confettiPaint);
+      canvas.drawCircle(Offset(center.dx - 90, center.dy - 90), 5, confettiPaint);
     }
   }
 
